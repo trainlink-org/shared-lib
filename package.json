@@ -1,0 +1,42 @@
+{
+  "name": "@trainlink-org/shared-lib",
+  "version": "0.0.0",
+  "description": "The library of classes used by the server and client ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --module commonjs",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format-check": "prettier --check .",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trainlink-org/shared-lib.git"
+  },
+  "keywords": [
+    "trainlink",
+    "trainlink-api",
+    "dcc",
+    "dcc-ex",
+    "railway"
+  ],
+  "author": "Trainlink Organisation",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/trainlink-org/shared-lib/issues"
+  },
+  "homepage": "https://github.com/trainlink-org/shared-lib#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@trainlink-org/trainlink-types": "^0.0.1-alpha.1"
+  }
+}
