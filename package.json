@@ -4,7 +4,7 @@
   "description": "The library of classes used by the server and client ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc --module commonjs",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -29,12 +29,16 @@
   },
   "homepage": "https://github.com/trainlink-org/shared-lib#readme",
   "devDependencies": {
+    "@types/jest": "^29.5.1",
     "@typescript-eslint/eslint-plugin": "^5.59.7",
     "@typescript-eslint/parser": "^5.59.7",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-jsdoc": "^45.0.0",
+    "jest": "^29.5.0",
     "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
   "dependencies": {
