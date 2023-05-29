@@ -65,7 +65,7 @@ export class Loco {
 
     getFunction(functionNum: number) {
         if (
-            functionNum >= MAX_FUNCTION_NUM &&
+            functionNum >= MIN_FUNCTION_NUM &&
             functionNum <= MAX_FUNCTION_NUM
         ) {
             return this._functions[functionNum];
