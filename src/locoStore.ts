@@ -1,5 +1,15 @@
 import { Direction, type LocoIdentifier } from '@trainlink-org/trainlink-types';
 
+const MIN_ADDRESS = 0;
+const MAX_ADDRESS = 10293;
+const DEFAULT_ADDRESS = 3;
+
+const MIN_SPEED = 0;
+const MAX_SPEED = 126;
+
+const MIN_FUNCTION_NUM = 0;
+const MAX_FUNCTION_NUM = 28;
+
 /**
  * A class to represent one locomotive
  */
@@ -8,26 +18,26 @@ export class Loco {
     readonly address: number;
     protected _speed = 0;
     protected _direction = Direction.forward;
-    private functions: boolean[] = [];
+    private _functions: boolean[] = [];
 
     constructor(name?: string, address?: number) {
         name ??= '';
-        address ??= 3;
+        address ??= DEFAULT_ADDRESS;
         this.name = name;
         // Validate input
-        if (address >= 0 && address <= 10293) {
+        if (address >= MIN_ADDRESS && address <= MAX_ADDRESS) {
             this.address = address;
         } else {
             this.address = 3; //Default value if given value out of range
         }
-        for (let i = 0; i <= 28; i++) {
-            this.functions[i] = false;
+        for (let i = 0; i <= MAX_FUNCTION_NUM; i++) {
+            this._functions[i] = false;
         }
     }
 
     set speed(newSpeed: number) {
         //Check speed is valid
-        if (newSpeed >= 0 && newSpeed <= 126) {
+        if (newSpeed >= MIN_SPEED && newSpeed <= MAX_SPEED) {
             this._speed = newSpeed;
         }
     }
@@ -45,14 +55,20 @@ export class Loco {
     }
 
     setFunction(functionNum: number, state: boolean) {
-        if (functionNum >= 0 && functionNum <= 28) {
-            this.functions[functionNum] = state;
+        if (
+            functionNum >= MIN_FUNCTION_NUM &&
+            functionNum <= MAX_FUNCTION_NUM
+        ) {
+            this._functions[functionNum] = state;
         }
     }
 
     getFunction(functionNum: number) {
-        if (functionNum >= 0 && functionNum <= 28) {
-            return this.functions[functionNum];
+        if (
+            functionNum >= MAX_FUNCTION_NUM &&
+            functionNum <= MAX_FUNCTION_NUM
+        ) {
+            return this._functions[functionNum];
         }
         return false;
     }

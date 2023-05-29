@@ -1,3 +1,4 @@
+/* eslint-disable no-magic-numbers */
 import { Direction } from '@trainlink-org/trainlink-types';
 import { Loco, LocoStoreBase } from '../src';
 
