@@ -28,3 +28,4 @@ jobs:
           git add .
           git commit -m "Update Documentation"
           git push
+        continue-on-error: true
