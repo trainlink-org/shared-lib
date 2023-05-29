@@ -12,6 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: Install dependancies
+        run: npm install
+
+      - name: Build source
+        run: npm run build
+
       - name: Build documentation
         run: npx typedoc src/index.ts
 
