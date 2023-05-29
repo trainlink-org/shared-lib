@@ -20,6 +20,9 @@ export class Loco {
         } else {
             this.address = 3; //Default value if given value out of range
         }
+        for (let i = 0; i <= 28; i++) {
+            this.functions[i] = false;
+        }
     }
 
     set speed(newSpeed: number) {
@@ -48,7 +51,10 @@ export class Loco {
     }
 
     getFunction(functionNum: number) {
-        return this.functions[functionNum];
+        if (functionNum >= 0 && functionNum <= 28) {
+            return this.functions[functionNum];
+        }
+        return false;
     }
 
     toString() {
