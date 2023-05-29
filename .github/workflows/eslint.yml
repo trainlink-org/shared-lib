@@ -36,7 +36,6 @@ jobs:
 
       - name: Run ESLint
         run: npx eslint .
-          --ignore-pattern src/websocketEvents.ts
           --config .eslintrc.json
           --ext .js,.jsx,.ts,.tsx
           --format @microsoft/eslint-formatter-sarif
