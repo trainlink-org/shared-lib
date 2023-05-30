@@ -1,8 +1,12 @@
 {
   "name": "@trainlink-org/shared-lib",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "The library of classes used by the server and client ",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "test": "jest",
     "build": "tsc --module commonjs",
