@@ -13,6 +13,7 @@ If you have a feature in mind or a bug you'd like to fix, great! If not, have a 
 
 ## Making changes
 
+To help make your changes, you can view the documentation for the library [here](https://trainlink-org.github.io/shared-lib). Also, the documentation for the types library may be useful, which can be found [here](https://trainlink-org.github.io/trainlink-types).
 Once you have made your changes and are ready to try them out, you can build the library using:
 
 ```bash
