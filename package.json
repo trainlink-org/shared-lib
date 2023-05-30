@@ -1,10 +1,10 @@
 {
   "name": "@trainlink-org/shared-lib",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "description": "The library of classes used by the server and client ",
-  "main": "dist/index.js",
+  "main": "dist/src/index.js",
   "files": [
-    "dist",
+    "dist/src",
     "src"
   ],
   "scripts": {
